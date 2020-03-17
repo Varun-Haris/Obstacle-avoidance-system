@@ -118,7 +118,11 @@ void obstacleAvoidance::identifyObstaclePose(){
         waypointPose.orientation = euler_to_quaterion(double(0), double(0), yaw);
       }
     }
-    else waypointPose = finalPose;
+    else{
+      waypointPose = finalPose;
+      waypointPose.position.x = finalPose.position.x - currentPose.position.x;
+      waypointPose.position.y = finalPose.position.y - currentPose.position.y;
+    }
   }
 }
 

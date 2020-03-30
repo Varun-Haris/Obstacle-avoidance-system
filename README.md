@@ -14,3 +14,6 @@ To run the jackal with the Velodyne 16 laser and a single box world, copy the bo
 *roslaunch your_package_name jackal_laser_world.launch*
 
 To change or remove the lazer/LiDAR, you can go to *accessories.urdf.xacro* and add the appropriate urdf file in the *jackal description* package. You can mention the description in the *examples.urdf.xacro* in the *accessories* folder
+
+The driver for the entire module is the navigation.cpp whose executable is created by building the system on *catkin_make* / *catkin build* depending on the system. The command to run the simulation is
+*rosrun your_package_name navigation*
